@@ -1,13 +1,28 @@
 #include<iostream>
 using namespace std;
-inline int add(int a,int b)
+class sum
 {
-int c=a+b;
-return c;
-}
+    int a,b,c;
+    public:
+    void set_data(int x,int y,int z)
+    {
+        a=x;
+        b=y;
+        c=z;
+    }
+    void show_data()
+    {
+        cout<<a<<b<<c<<endl;
+    }
+    int add()
+    {
+        return (a+b+c);
+    }
+};
 int main()
 {
-
-    cout<<"addition of a and b is"<<add(2,3);
-    return 0;
+    sum ob;
+    ob.set_data(5,10,20);
+    ob.show_data();
+    cout<<ob.add();
 }
